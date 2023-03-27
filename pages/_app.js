@@ -81,6 +81,18 @@ export const Card = styled.div`
         scale: 1.03;
   }
 
+  @media (max-width: 992px) {
+    width: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
+  }
+
+  @media (max-width: 650px) {
+    width: 160px;
+  }
+
   @media (max-width: 576px) {
     width: 100%;
   }
@@ -93,7 +105,8 @@ export const CardImg = styled.div`
   background-size: cover;
   border-radius: 5px 5px 0px 0px;
   background-color: #333;
-  @media (min-width: 992px) {
+
+  @media (min-width: 576px) {
     height: 140px;
   }
   @media (max-width: 576px) {

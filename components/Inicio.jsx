@@ -1,14 +1,13 @@
 import styled, { keyframes } from 'styled-components'
-import { Contenedor} from '@/pages/_app'
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image'
 
-
 export default function Inicio() {
 
-    const Container = styled.div`
+
+
+  const Container = styled.div`
       position: absolute;
       width: 100%;
       height: 100%;
@@ -25,7 +24,7 @@ export default function Inicio() {
         background-position-y: -100px;
       }
     `
-    const fadeIn = keyframes`
+  const fadeIn = keyframes`
       from{
         opacity: 0;
       }
@@ -34,13 +33,13 @@ export default function Inicio() {
       }
     `
 
-  const floating = keyframes `
+  const floating = keyframes`
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 15px); }
     100%   { transform: translate(0, -0px); } 
   `
 
-    const ContenedorTituloInicio = styled.div`
+  const ContenedorTituloInicio = styled.div`
       display: flex;
       flex-direction: column;
       animation:  ${fadeIn} 1s forwards;
@@ -56,7 +55,7 @@ export default function Inicio() {
       }
     `
 
-    const Titulo = styled.h1`
+  const Titulo = styled.h1`
       color: #fff;
       margin-bottom: 15px;
       @media (min-width: 992px) {
@@ -68,7 +67,7 @@ export default function Inicio() {
         font-weight: 700;
       }
     `
-    const Hr = styled.div`
+  const Hr = styled.div`
       width: 100%;
       background-color: #fff;
       @media (max-width: 1200px) {
@@ -79,7 +78,7 @@ export default function Inicio() {
       }
     `
 
-    const SubTitulo = styled.h3`
+  const SubTitulo = styled.h3`
       color: #fff;
       margin: 15px 0px 0px 0px;
       @media (max-width: 576px) {
@@ -88,7 +87,7 @@ export default function Inicio() {
         line-height: 2.3rem;
       }
     `
-    const Parrafo = styled.p`
+  const Parrafo = styled.p`
       color: #fff;
       font-size: .75rem;
       font-weight: 500;
@@ -98,7 +97,7 @@ export default function Inicio() {
       }
     `
 
-    const DivNumeroProximaAventura = styled.div`
+  const DivNumeroProximaAventura = styled.div`
       width: 100%;
       display: flex;
       color: aliceblue;
@@ -119,17 +118,17 @@ export default function Inicio() {
      left: 97px;
    }
  `
-    const DivContenedorNumero = styled.div`
+  const DivContenedorNumero = styled.div`
       width: 60%;
       padding-top: 80px;
     `
-    const DivNumero = styled.div`
+  const DivNumero = styled.div`
       display: flex;
       align-items: center;
       width: 300px;
       height: 150px;
     `
-    const DivNumeroCirculoFuera = styled.div`
+  const DivNumeroCirculoFuera = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
@@ -148,7 +147,7 @@ export default function Inicio() {
 
     `
 
-    const DivNumeroCirculoDentro = styled.div`
+  const DivNumeroCirculoDentro = styled.div`
       display: flex;
       justify-content:center;
       align-items: center;
@@ -158,7 +157,7 @@ export default function Inicio() {
       border-radius: 50%;
       `
 
-      const DivNumeroLinea = styled.div`
+  const DivNumeroLinea = styled.div`
       width: 105px;
       height: 4px;
       background-color: #fa6980;
@@ -175,13 +174,13 @@ export default function Inicio() {
       
     `
 
-    const Numero = styled.span`
+  const Numero = styled.span`
       color: #333;
       font-size: .6rem;
       font-weight: 800;
     `
 
-    const DivContenedorProximaAventura = styled.div`
+  const DivContenedorProximaAventura = styled.div`
       width: 40%;
       display: flex;
       justify-content: center;
@@ -193,7 +192,7 @@ export default function Inicio() {
 
     `
 
-    const DivProximaAventura = styled.div`
+  const DivProximaAventura = styled.div`
       width: 150px;
       height: 78px;
       border: dashed 2px #575a5c;
@@ -216,64 +215,64 @@ export default function Inicio() {
       }
     `
 
-    const DivProxAventuraContenedorTitulo = styled.div`
+  const DivProxAventuraContenedorTitulo = styled.div`
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
-    ` 
+    `
 
-    const ProxAventuraTitulo = styled.span`
+  const ProxAventuraTitulo = styled.span`
       color: #fa6980;
       font-size: .75rem;
       font-weight: 700;
-    ` 
-    const EuropaMeridional = styled.span`
+    `
+  const EuropaMeridional = styled.span`
       color: #fff;
       font-size: .75rem;
       font-weight: 700;
       margin-top: 5px;
-    ` 
-    const ProxAvenParrafo = styled.p`
+    `
+  const ProxAvenParrafo = styled.p`
       color: #eee;
       font-size: .65rem;
       font-weight: 400;
       line-height: 1.1rem;
       margin-top: 5px;
-    ` 
+    `
 
-    return(
-      <div id='Inicio'>
-        <Container>
-          <ContenedorTituloInicio>
-            <Titulo><FontAwesomeIcon width={18} icon={faLocationDot} /> AMÉRICA DEL SUR</Titulo>
-            <Hr/>
-            <SubTitulo>Lugares maravillosos por Amèrica del Sur</SubTitulo>
-            <Parrafo>Estos son algunos lugares que elijen la mayoria de los turistas que visitan Amèrica del sur.</Parrafo>
-          </ContenedorTituloInicio>
-          <DivNumeroProximaAventura>
-            <DivContenedorNumero>
-              <DivNumero>
-              <DivNumeroLinea/>
-                <DivNumeroCirculoFuera>
-                  <DivNumeroCirculoDentro>
-                    <Numero>01</Numero>
-                  </DivNumeroCirculoDentro>
-                </DivNumeroCirculoFuera>
-              </DivNumero>
-            </DivContenedorNumero>
-            <DivContenedorProximaAventura>
-              <DivProximaAventura>
-                <DivProxAventuraContenedorTitulo>
-                  <ProxAventuraTitulo>PRÓXIMA AVENTURA </ProxAventuraTitulo>
-                  <Image src='/iconos/arrow.png' width={5} height={8} alt="arrow"/>
-                </DivProxAventuraContenedorTitulo>
-                <EuropaMeridional>Europa Meridional</EuropaMeridional>
-                <ProxAvenParrafo>Forman parte veinte paises. ej. España, Francia, etc</ProxAvenParrafo>
-              </DivProximaAventura>
-            </DivContenedorProximaAventura>
-          </DivNumeroProximaAventura>
-        </Container>
-      </div>
-    )
+  return (
+    <div id='Inicio'>
+      <Container>
+        <ContenedorTituloInicio>
+          <Titulo><FontAwesomeIcon width={18} icon={faLocationDot} /> AMERICA DEL SUR</Titulo>
+          <Hr />
+          <SubTitulo>Lugares maravillosos por Amèrica del Sur</SubTitulo>
+          <Parrafo>Estos son algunos lugares que elijen la mayoría de los turistas que visitan Amèrica del sur.</Parrafo>
+        </ContenedorTituloInicio>
+        <DivNumeroProximaAventura>
+          <DivContenedorNumero>
+            <DivNumero>
+              <DivNumeroLinea />
+              <DivNumeroCirculoFuera>
+                <DivNumeroCirculoDentro>
+                  <Numero>01</Numero>
+                </DivNumeroCirculoDentro>
+              </DivNumeroCirculoFuera>
+            </DivNumero>
+          </DivContenedorNumero>
+          <DivContenedorProximaAventura>
+            <DivProximaAventura>
+              <DivProxAventuraContenedorTitulo>
+                <ProxAventuraTitulo>PRÓXIMA AVENTURA </ProxAventuraTitulo>
+                <Image src='/iconos/arrow.png' width={5} height={8} alt="arrow" />
+              </DivProxAventuraContenedorTitulo>
+              <EuropaMeridional>Europa Meridional</EuropaMeridional>
+              <ProxAvenParrafo>Forman parte veinte paises. ej. España, Francia, etc</ProxAvenParrafo>
+            </DivProximaAventura>
+          </DivContenedorProximaAventura>
+        </DivNumeroProximaAventura>
+      </Container>
+    </div>
+  )
 }

@@ -6,8 +6,7 @@ import { Contenedor, Footer } from './_app'
 import Tendencias from '@/components/Tendencias'
 import Blog from '@/components/Blog'
 import Inicio from '@/components/Inicio'
-
-
+import { useEffect, useState } from 'react'
 
 const Seccion = styled.div`
   height: max-content;
@@ -20,8 +19,33 @@ const Seccion = styled.div`
   }
 `  
 
-
 export default function Home() {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 500);
+  }, [])
+
+  if (loading) {
+    return (
+      <div style={{ width: "100vw",
+        height: "100vh",
+        display: "flex",
+        top:"0",
+        left:"0",
+        position: "absolute",
+        ['justify-content']: "center",
+        ['align-items']: "center",
+        ['background-color']:"#383838"
+        }}>
+          <Image src="/img/loader.gif" width={30} height={30} alt='loader'></Image>
+      </div>
+    )
+  }
+  else {
   return (
     <>
       <Layout>
@@ -48,4 +72,5 @@ export default function Home() {
       </Layout>
     </>
   )
+  }
 }
