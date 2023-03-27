@@ -14,12 +14,13 @@ export default function Inicio() {
       background-repeat: no-repeat;
       background-image: url("../img/Viajes_Hero.jpg");
       z-index: 0;
-      top: 0;
+      top: 0px;
       padding-top: 50px;
       @media (max-width: 1200px) and (min-width: 576px) {
         background-size: 100vw 93vh;
       }
       @media (max-width: 576px) {
+        top: 100px;
         background-position-x: -330px;
         background-position-y: -100px;
       }
