@@ -20,7 +20,7 @@ export default function Inicio() {
         background-size: 100vw 93vh;
       }
       @media (max-width: 576px) {
-        top: 100px;
+        top: 50px;
         background-position-x: -330px;
         background-position-y: -100px;
       }
