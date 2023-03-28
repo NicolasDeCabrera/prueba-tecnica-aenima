@@ -16,13 +16,10 @@ export default function Inicio() {
       z-index: 0;
       top: 0px;
       padding-top: 50px;
-      @media (max-width: 1200px) and (min-width: 576px) {
-        background-size: 100vw 93vh;
-      }
+      background-size: 100vw 93vh;
+
       @media (max-width: 576px) {
         top: 50px;
-        background-position-x: -330px;
-        background-position-y: -100px;
       }
     `
   const fadeIn = keyframes`
@@ -47,8 +44,21 @@ export default function Inicio() {
       width: 420px;
       margin-top: 13.5%;
       margin-left: 10%;
-      @media (orientation: landscape) {
-        margin-top: 0%;
+      @media (max-width: 1920px) {
+        width: 580px;
+      }
+      @media (max-width: 1200px) {
+        width: 450px;
+      }
+      @media (max-width: 992px) {
+        width: 350px;
+      }
+      @media (max-width: 768px) {
+        width: 320px;
+      }
+      @media (max-width: 640px) {
+        width: 310px;
+        margin-top: 10%;
       }
       @media (max-width: 576px) {
         width: 300px;
@@ -60,19 +70,34 @@ export default function Inicio() {
   const Titulo = styled.h1`
       color: #fff;
       margin-bottom: 15px;
-      @media (min-width: 992px) {
+      
+      @media (max-width: 1920px) {
+        font-weight: 700;
+        font-size: 3rem;
+      }
+      @media (max-width: 1200px) {
         font-weight: 800;
         font-size: 2.15rem;
+      }
+      @media (max-width: 992px) {
+        font-weight: 800;
+        font-size: 1.7rem;
+      }
+      @media (max-width: 768px) {
+        font-weight: 800;
+        font-size: 1.5rem;
       }
       @media (max-width: 576px) {
         font-size: 1.65rem;
         font-weight: 700;
+        
       }
     `
   const Hr = styled.div`
       width: 100%;
       background-color: #fff;
-      @media (max-width: 1200px) {
+      height: .1rem;
+      @media (max-width: 1920px) {
         height: .1rem;
       }
       @media (max-width: 576px) {
@@ -83,6 +108,19 @@ export default function Inicio() {
   const SubTitulo = styled.h3`
       color: #fff;
       margin: 15px 0px 0px 0px;
+
+      @media (max-width: 1920px) {
+        font-size: 1.5rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: 1.2rem;
+      }
+      @media (max-width: 992px) {
+        font-size: .9rem;
+      }
+      @media (max-width: 768px) {
+        font-size: .8rem;
+      }
       @media (max-width: 576px) {
         font-size: 1.4rem;
         font-weight: 700;
@@ -94,6 +132,18 @@ export default function Inicio() {
       font-size: .75rem;
       font-weight: 500;
       line-height: 1.2rem;
+      @media (max-width: 1920px) {
+        font-size: .9rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: .8rem;
+      }
+      @media (max-width: 992px) {
+        font-size: .7rem;
+      }
+      @media (max-width: 768px) {
+        font-size: .6rem;
+      }
       @media (max-width: 576px) {
         display: none;
       }
@@ -123,8 +173,23 @@ export default function Inicio() {
   const DivContenedorNumero = styled.div`
       width: 60%;
       padding-top: 80px;
-      @media (orientation: landscape) {
-        padding-top: 10px;
+      @media (max-width: 1920px) {
+        padding-top: 180px;
+      }
+      @media (max-width: 1200px) {
+        padding-top: 120px;
+      }
+      @media (max-width: 992px) {
+        padding-top: 100px;
+      }
+      @media (max-width: 768px) {
+        padding-top: 80px;
+      }
+      @media (max-width: 720px) {
+        padding-top: 0;
+      }
+      @media (max-width: 576px) {
+        padding-top: 80px;
       }
     `
   const DivNumero = styled.div`
@@ -190,6 +255,7 @@ export default function Inicio() {
       display: flex;
       justify-content: center;
       align-items: center;
+
       @media (max-width: 576px) {
         display: none;
       }
@@ -216,6 +282,22 @@ export default function Inicio() {
       &:hover{
         background-color: #35353588;
         scale: 1.01;
+      } 
+      @media (max-width: 1920px) {
+        padding: 20px;
+        width: 180px;
+        height: 110px;
+      }
+      @media (max-width: 1200px) {
+        padding: 20px;
+        width: 150px;
+        height: 78px;
+      }
+
+      @media (max-width: 720px) {
+        padding: 10px;
+        width: 120px;
+        height: 60px;
       }
     `
 
@@ -230,12 +312,30 @@ export default function Inicio() {
       color: #fa6980;
       font-size: .75rem;
       font-weight: 700;
+      @media (max-width: 1920px) {
+        font-size: .8rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: .75rem;
+      }
+      @media (max-width: 720px) {
+        font-size: .5rem;
+      }
     `
   const EuropaMeridional = styled.span`
       color: #fff;
       font-size: .75rem;
       font-weight: 700;
       margin-top: 5px;
+      @media (max-width: 1920px) {
+        font-size: .9rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: .75rem;
+      }
+      @media (max-width: 720px) {
+        font-size: .5rem;
+      }
     `
   const ProxAvenParrafo = styled.p`
       color: #eee;
@@ -243,6 +343,15 @@ export default function Inicio() {
       font-weight: 400;
       line-height: 1.1rem;
       margin-top: 5px;
+      @media (max-width: 1920px) {
+        font-size: .85rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: .65rem;
+      }
+      @media (max-width: 720px) {
+        font-size: .5rem;
+      }
     `
 
   return (

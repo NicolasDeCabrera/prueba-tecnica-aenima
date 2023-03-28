@@ -1,36 +1,38 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Contenedor, CardTitle, TituloSecciones } from '@/pages/_app'
 import Image from 'next/image'
 
 
 export default function Blog() {
-    // <ContGeneral flex column align_items="center" justify_content="center" w="100%" px="90px">
 
-const ContGeneral = styled.div`
+    const ContGeneral = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: calc(100% - 180px);
     padding: 0 90px;
-    
-    @media (min-width: 1200px) {
+    @media (max-width: 1920px) {
         width: calc(100% - 300px);
         padding: 0px 150px;
+    }
+    @media (max-width: 1200px) {
+        width: calc(100% - 200px);
+        padding: 0px 100px;
     }
     @media (max-width: 992px) {
         width: 100%;
         padding: 0;
     }
-`    
+`
 
-const TituloBlog = styled(TituloSecciones)`
+    const TituloBlog = styled(TituloSecciones)`
     @media (max-width: 576px) {
         padding-left: 50px;
     }
 `
 
-const ContArticulosGrande = styled.div`
+    const ContArticulosGrande = styled.div`
     display: flex;
     flex-direction: column;
     gap:30PX;
@@ -41,10 +43,10 @@ const ContArticulosGrande = styled.div`
     }
 `
 
-const ContArtGrandeImg = styled.div`
+    const ContArtGrandeImg = styled.div`
     display: flex;
     flex-direction: column;
-    background-image: url(${({img})=>img});
+    background-image: url(${({ img }) => img});
     border-radius: 5px;
     height: 325px;
     transition: all .5s;
@@ -62,7 +64,7 @@ const ContArtGrandeImg = styled.div`
    
 `
 
-const CategoriaArticuloImg = styled.h6`
+    const CategoriaArticuloImg = styled.h6`
     color:#fff;
     margin: 0;
     font-size: .78rem;
@@ -71,7 +73,7 @@ const CategoriaArticuloImg = styled.h6`
     }
 `
 
-const TituloArticuloImg = styled.h3`
+    const TituloArticuloImg = styled.h3`
     color:#fff;
     margin: 0;
     margin-bottom: 5px;
@@ -81,7 +83,7 @@ const TituloArticuloImg = styled.h3`
         font-size: 1.5rem;
     }
 `
-const TextoArticuloImg = styled.p`
+    const TextoArticuloImg = styled.p`
     color:#fff;
     margin: 0;
     margin-bottom: 23px;
@@ -91,7 +93,7 @@ const TextoArticuloImg = styled.p`
         display: none;
     }
 `
-const ContenedorArticulosSmall = styled.div`
+    const ContenedorArticulosSmall = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -102,8 +104,7 @@ const ContenedorArticulosSmall = styled.div`
     }
 `
 
-const ArticuloSmall = styled.div`
-    width: 275px;
+    const ArticuloSmall = styled.div`
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -116,14 +117,14 @@ const ArticuloSmall = styled.div`
         scale: 1.03;
     }
 `
-const ImgArticuloSmall = styled.div`
+    const ImgArticuloSmall = styled.div`
     width: 100%;
     height: 150px;
-    background-image: url(${({img})=> img});
+    background-image: url(${({ img }) => img});
     background-size: cover;
 `
 
-const ContentArticuloSmall = styled.div`
+    const ContentArticuloSmall = styled.div`
     width: calc(100% - 10px);
     height: calc(60px - 10px);
     display: flex;
@@ -131,7 +132,7 @@ const ContentArticuloSmall = styled.div`
     padding: 5px;
 `
 
-const InfoTiempo = styled.div`
+    const InfoTiempo = styled.div`
     color: #ced2d3;
     font-size: .57rem;
     font-weight: 500;
@@ -145,74 +146,74 @@ const InfoTiempo = styled.div`
     }
 `
 
-return (
-    <div id='Blog'>
-        <ContGeneral>
-        <Contenedor flex align_items="center" w="100%" mt="60px">
-        <TituloBlog>BLOG</TituloBlog>
-        </Contenedor>
-        <Contenedor flex gap="13px" w="100%">
-
-        <ContArticulosGrande flex column gap="30px" br="5px" w="67%">
-
-            <ContArtGrandeImg img="/img/articulo_big_01.png">
-            <Contenedor flex column justify_content="space-between" px="30px" py="30px" h="100%">
-                <CategoriaArticuloImg>CIUDAD</CategoriaArticuloImg>
-                <Contenedor>
-                <TituloArticuloImg>Artìculo de puente</TituloArticuloImg>
-                <TextoArticuloImg>Un puente es una construcciòn que permite salvar un accidente geogràfico</TextoArticuloImg>
-                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj"/> Hace 2m</InfoTiempo>
+    return (
+        <div id='Blog'>
+            <ContGeneral>
+                <Contenedor flex align_items="center" w="100%" mt="60px">
+                    <TituloBlog>BLOG</TituloBlog>
                 </Contenedor>
-            </Contenedor>
-            </ContArtGrandeImg>
-            
-            <ContArtGrandeImg img="/img/articulo_big_02.png">
-            <Contenedor flex column justify_content="space-between" px="30px" py="30px" h="100%">
-                <CategoriaArticuloImg>AVENTURA</CategoriaArticuloImg>
-                <Contenedor>
-                <TituloArticuloImg>Artìculo de bosque</TituloArticuloImg>
-                <TextoArticuloImg>Lugar poblado de árboles y arbustos. Área con una importante de</TextoArticuloImg>
-                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj"/> Hace 15m</InfoTiempo>
+                <Contenedor flex gap="13px" w="100%">
+
+                    <ContArticulosGrande flex column gap="30px" br="5px" w="67%">
+
+                        <ContArtGrandeImg img="/img/articulo_big_01.png">
+                            <Contenedor flex column justify_content="space-between" px="30px" py="30px" h="100%">
+                                <CategoriaArticuloImg>CIUDAD</CategoriaArticuloImg>
+                                <Contenedor>
+                                    <TituloArticuloImg>Artìculo de puente</TituloArticuloImg>
+                                    <TextoArticuloImg>Un puente es una construcciòn que permite salvar un accidente geogràfico</TextoArticuloImg>
+                                    <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj" /> Hace 2m</InfoTiempo>
+                                </Contenedor>
+                            </Contenedor>
+                        </ContArtGrandeImg>
+
+                        <ContArtGrandeImg img="/img/articulo_big_02.png">
+                            <Contenedor flex column justify_content="space-between" px="30px" py="30px" h="100%">
+                                <CategoriaArticuloImg>AVENTURA</CategoriaArticuloImg>
+                                <Contenedor>
+                                    <TituloArticuloImg>Artìculo de bosque</TituloArticuloImg>
+                                    <TextoArticuloImg>Lugar poblado de árboles y arbustos. Área con una importante de</TextoArticuloImg>
+                                    <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj" /> Hace 15m</InfoTiempo>
+                                </Contenedor>
+                            </Contenedor>
+                        </ContArtGrandeImg>
+
+                    </ContArticulosGrande>
+
+                    <ContenedorArticulosSmall>
+
+                        <ArticuloSmall >
+                            <ImgArticuloSmall img="/img/articulo_small_01.png">
+                            </ImgArticuloSmall>
+                            <ContentArticuloSmall>
+                                <CardTitle>Artìculo de elefante</CardTitle>
+                                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj" /> Hace 3h</InfoTiempo>
+                            </ContentArticuloSmall>
+                        </ArticuloSmall>
+
+                        <ArticuloSmall >
+                            <ImgArticuloSmall img="/img/articulo_small_02.png">
+                            </ImgArticuloSmall>
+                            <ContentArticuloSmall>
+                                <CardTitle>Artìculo de loro</CardTitle>
+                                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj" /> Hace 4h</InfoTiempo>
+                            </ContentArticuloSmall>
+                        </ArticuloSmall>
+
+                        <ArticuloSmall >
+                            <ImgArticuloSmall img="/img/articulo_small_03.png">
+                            </ImgArticuloSmall>
+                            <ContentArticuloSmall>
+                                <CardTitle>Artìculo de camino</CardTitle>
+                                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj" /> Hace 8h</InfoTiempo>
+                            </ContentArticuloSmall>
+                        </ArticuloSmall>
+
+
+                    </ContenedorArticulosSmall>
                 </Contenedor>
-            </Contenedor>
-            </ContArtGrandeImg>
 
-        </ContArticulosGrande>
-        
-        <ContenedorArticulosSmall>
-            
-            <ArticuloSmall >
-            <ImgArticuloSmall img="/img/articulo_small_01.png">
-            </ImgArticuloSmall>
-            <ContentArticuloSmall>
-                <CardTitle>Artìculo de elefante</CardTitle>
-                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj"/> Hace 3h</InfoTiempo>
-            </ContentArticuloSmall>
-            </ArticuloSmall>
-
-            <ArticuloSmall >
-            <ImgArticuloSmall img="/img/articulo_small_02.png">
-            </ImgArticuloSmall>
-            <ContentArticuloSmall>
-                <CardTitle>Artìculo de loro</CardTitle>
-                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj"/> Hace 4h</InfoTiempo>
-            </ContentArticuloSmall>
-            </ArticuloSmall>
-
-            <ArticuloSmall >
-            <ImgArticuloSmall img="/img/articulo_small_03.png">
-            </ImgArticuloSmall>
-            <ContentArticuloSmall>
-                <CardTitle>Artìculo de camino</CardTitle>
-                <InfoTiempo> <Image src='/iconos/time.png' width={12} height={12} alt="reloj"/> Hace 8h</InfoTiempo>
-            </ContentArticuloSmall>
-            </ArticuloSmall>
-
-        
-        </ContenedorArticulosSmall>
-        </Contenedor>
-
-        </ContGeneral>
-    </div>
+            </ContGeneral>
+        </div>
     )
 }
