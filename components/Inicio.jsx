@@ -44,10 +44,11 @@ export default function Inicio() {
       display: flex;
       flex-direction: column;
       animation:  ${fadeIn} 1s forwards;
-      @media (min-width: 992px) {
-        width: 420px;
-        margin-top: 13.5%;
-        margin-left: 10%;
+      width: 420px;
+      margin-top: 13.5%;
+      margin-left: 10%;
+      @media (orientation: landscape) {
+        margin-top: 0%;
       }
       @media (max-width: 576px) {
         width: 300px;
@@ -122,6 +123,9 @@ export default function Inicio() {
   const DivContenedorNumero = styled.div`
       width: 60%;
       padding-top: 80px;
+      @media (orientation: landscape) {
+        padding-top: 10px;
+      }
     `
   const DivNumero = styled.div`
       display: flex;
@@ -186,7 +190,6 @@ export default function Inicio() {
       display: flex;
       justify-content: center;
       align-items: center;
-      
       @media (max-width: 576px) {
         display: none;
       }

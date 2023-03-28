@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prueba Técnica - Front-end
 
-## Getting Started
 
-First, run the development server:
+## Clonar repositorio:
+#### Has click en el boton Verde `"Code"` y copia el link.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<img src="public/img/readme/clonar-repo.png" style="margin:30px 20px" />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Abre una terminal y posicionate en la carpeta donde quieres guardar el proyecto.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<img src="public/img/readme/terminal.png" style="margin:30px 20px" />
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Una vez posicionado escribe `git clone` mas el link que copiaste y presiona enter.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img src="public/img/readme/git-clone.png" style="margin:30px 20px" />
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Si todo fue bien deberias ver las carpeta con los archivos dentro de la carpeta que elegiste.
 
-## Learn More
+<img src="public/img/readme/carpetas.png" style="margin:30px 20px" />
 
-To learn more about Next.js, take a look at the following resources:
+#### En tu editor de codigo abre la carpeta del proyecto.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## instalacion de dependencias:
 
-## Deploy on Vercel
+#### Abre la terminal del editor de codigo.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Escribe `npm install` da enter y espera que se instalen todas las dependencias.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="public/img/readme/npm-i.png" style="margin:30px 10px" />
+
+## Iniciar en modo de desarrollo:
+
+#### Escribe `npm run dev` da enter y espera.
+#### Una vez iniciado vas a poder acceder desde el navegador con la ruta `http://localhost:3000/`
+<img src="public/img/readme/npm-run-dev.png" style="margin:30px 0px" />
