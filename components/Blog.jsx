@@ -12,15 +12,19 @@ export default function Blog() {
     justify-content: center;
     width: calc(100% - 180px);
     padding: 0 90px;
+    @media (max-width: 2700px) {
+        width: calc(100% - 1600px);
+        padding: 0px 800px;
+    }
     @media (max-width: 1920px) {
-        width: calc(100% - 300px);
-        padding: 0px 150px;
+        width: calc(100% - 600px);
+        padding: 0px 300px;
     }
     @media (max-width: 1200px) {
         width: calc(100% - 200px);
         padding: 0px 100px;
     }
-    @media (max-width: 992px) {
+    @media (max-width: 560px) {
         width: 100%;
         padding: 0;
     }
@@ -55,7 +59,14 @@ export default function Blog() {
 
     &:hover{
         box-shadow: 0px 15px 7px #00000052;
-        scale: 1.03;
+        scale: 1.01;
+    }
+ 
+    @media (max-width: 1920px) {
+        height: 430px;
+    }
+    @media (max-width: 1200px) {
+        height: 430px;
     }
 
     @media (max-width: 576px) {
@@ -114,7 +125,7 @@ export default function Blog() {
     z-index: 100;
     &:hover{
         box-shadow: 0px 15px 7px #00000052;
-        scale: 1.03;
+        scale: 1.01;
     }
 `
     const ImgArticuloSmall = styled.div`
@@ -122,6 +133,11 @@ export default function Blog() {
     height: 150px;
     background-image: url(${({ img }) => img});
     background-size: cover;
+    
+    @media (max-width: 1920px) {
+        height: 200px;
+    }
+    
 `
 
     const ContentArticuloSmall = styled.div`

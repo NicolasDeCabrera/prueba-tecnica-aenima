@@ -11,9 +11,17 @@ export default function Tendencias() {
     align-items: center;
     width: calc(100% - 184px);
     padding: 0px 92px;
-    @media (min-width: 1200px) {
-        width: calc(100% - 300px);
-        padding: 0px 150px;
+    @media (max-width: 2700px) {
+        width: calc(100% - 1600px);
+        padding: 0px 800px;
+    }
+    @media (max-width: 1920px) {
+        width: calc(100% - 400px);
+        padding: 0px 200px;
+    }
+    @media (max-width: 1200px) {
+        width: calc(100% - 200px);
+        padding: 0px 100px;
     }
     @media (max-width: 768px) {
         width: calc(100% - 80px);
